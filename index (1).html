@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071b2b">
+<title>Delta State | Public Projects & Leadership</title>
+<style>
+:root{--navy:#071b2b;--navy2:#0c2a40;--gold:#e4b45f;--cream:#f5f3ed;--ink:#172633;--muted:#657582;--white:#fff;--line:#e5e9ec}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+a{color:inherit}.topbar{background:#04121d;color:#dce5eb;padding:9px 5%;font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+header{background:var(--navy);color:white;padding:18px 5%;position:sticky;top:0;z-index:10;border-bottom:1px solid #254156}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.08em}.seal{width:42px;height:42px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:12px}.brand small{display:block;font-size:9px;color:#b9c7d1;letter-spacing:.16em;font-weight:500}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{text-decoration:none;font-size:13px;color:#e6edf2}nav a:hover{color:var(--gold)}
+.hero{background:linear-gradient(115deg,rgba(5,23,37,.96),rgba(8,39,59,.86)),url('https://pbs.twimg.com/media/GKqkk1bWEAEsRfM.jpg') center/cover;color:white;padding:76px 5% 66px}
+.hero-inner{max-width:1200px;margin:auto}.eyebrow{color:var(--gold);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:11px}.hero h1{font-size:clamp(36px,6vw,68px);line-height:1.05;max-width:800px;margin:16px 0}.hero p{max-width:650px;color:#d2dde5;font-size:16px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:12px 18px;border-radius:4px;text-decoration:none;font-weight:700;font-size:13px;background:var(--gold);color:#142433}.btn.secondary{background:transparent;color:white;border:1px solid #8094a3}
+.wrap{max-width:1200px;margin:auto;padding:0 5%}.notice{margin:26px auto 0;padding:14px 16px;background:#fff7e7;border-left:4px solid var(--gold);font-size:13px;color:#59451f}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px auto}.stat{background:white;padding:20px;border:1px solid var(--line);border-radius:7px}.stat strong{font-size:27px;color:var(--navy);display:block}.stat span{font-size:12px;color:var(--muted)}
+section{padding:48px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:22px;flex-wrap:wrap}.section-head h2{margin:5px 0;font-size:clamp(24px,4vw,34px);color:var(--navy)}.section-head p{margin:0;color:var(--muted);font-size:13px}.kicker{font-size:10px;letter-spacing:.18em;color:#9a6a20;font-weight:800;text-transform:uppercase}
+.feature{display:grid;grid-template-columns: minmax(220px, .8fr) 1.2fr;background:white;border-radius:9px;overflow:hidden;border:1px solid var(--line)}.feature img{width:100%;height:100%;min-height:300px;object-fit:cover}.feature-copy{padding:28px}.role{color:#9a6a20;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:.14em}.feature h3{font-size:27px;color:var(--navy);margin:8px 0}.feature ul{padding-left:19px}.feature li{margin:8px 0}.source{font-size:11px;color:var(--muted)}.source a{color:#315d78}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid var(--line);border-radius:8px;overflow:hidden}.card img{width:100%;height:170px;object-fit:cover;background:#dce4e8}.card-body{padding:17px}.tag{display:inline-block;background:#edf2f5;color:#36556a;padding:4px 8px;font-size:10px;border-radius:20px;font-weight:700}.card h3{margin:10px 0 5px;color:var(--navy);font-size:18px}.card p{margin:0 0 12px;color:#586975;font-size:13px}.card a{font-size:12px;font-weight:700;color:#8a5c18}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar input,.toolbar select{padding:12px;border:1px solid #cbd4da;border-radius:5px;background:white;font-size:14px;min-width:190px;flex:1}
+.lga-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.lga{background:white;border:1px solid var(--line);padding:13px;border-radius:6px}.lga b{display:block;font-size:13px;color:var(--navy)}.lga span{font-size:11px;color:var(--muted)}.lga small{display:block;margin-top:5px;color:#946b2d;font-size:10px}
+.project{display:grid;grid-template-columns:160px 1fr;gap:16px;background:white;padding:15px;border:1px solid var(--line);border-radius:8px;margin-bottom:12px}.project img{width:160px;height:125px;object-fit:cover;border-radius:5px}.project h3{margin:2px 0 5px;font-size:17px;color:var(--navy)}.project p{font-size:13px;color:#5d6d78;margin:0 0 8px}.status{font-size:10px;text-transform:uppercase;font-weight:800;color:#76511c}
+footer{background:#04121d;color:#c3d0d9;padding:40px 5%;font-size:12px}footer .foot{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr;gap:25px}footer h3{color:white}footer a{color:#e5bd75}.disclaimer{color:#98aab7;font-size:11px;margin-top:20px}
+@media(max-width:800px){nav{display:none}.cards{grid-template-columns:repeat(2,1fr)}.lga-grid{grid-template-columns:repeat(2,1fr)}.feature{grid-template-columns:1fr}.feature img{height:240px;min-height:0}.stats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.hero{padding:55px 5%}.cards{grid-template-columns:1fr}.stats{gap:7px}.stat{padding:12px}.stat strong{font-size:21px}.stat span{font-size:10px}.project{grid-template-columns:1fr}.project img{width:100%;height:180px}footer .foot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>DELTA STATE • NIGERIA</span><span>PUBLIC LEADERSHIP & PROJECT INFORMATION</span></div>
+<header><div class="nav">
+ <div class="brand"><div class="seal">DS</div><div>DELTA STATE<small>THE BIG HEART • PUBLIC INFORMATION</small></div></div>
+ <nav><a href="#leadership">Leadership</a><a href="#projects">Projects</a><a href="#lgas">Local Government</a><a href="#sources">Sources</a></nav>
+</div></header>
+<main>
+<section class="hero"><div class="hero-inner">
+ <div class="eyebrow">People • Projects • Public record</div>
+ <h1>Tracking progress across Delta State.</h1>
+ <p>A public-facing information portal bringing together state leadership, reported development projects and local government information in one mobile-friendly place.</p>
+ <div class="hero-actions"><a class="btn" href="#projects">Explore reported projects</a><a class="btn secondary" href="#leadership">Meet the leadership</a></div>
+</div></section>
+<div class="wrap">
+ <div class="notice"><b>Editorial note:</b> This is an independent prototype, not an official Delta State Government website. Project descriptions below are attributed to published reports. Announced, ongoing and completed works are not interchangeable. Verify current office holders and project status before public display.</div>
+ <div class="stats">
+  <div class="stat"><strong>25</strong><span>Local Government Areas</span></div>
+  <div class="stat"><strong>2023–26</strong><span>Current administration period covered</span></div>
+  <div class="stat"><strong>Open</strong><span>Public information prototype</span></div>
+ </div>
+ <section id="leadership">
+  <div class="section-head"><div><div class="kicker">State executive</div><h2>Leadership</h2><p>Key executive office holders identified in current public listings.</p></div></div>
+  <article class="feature">
+   <img src="https://www.penglobalinc.com/media/Picsart_24-10-05_05-58-28-344_1728106802.jpg" alt="Portrait of Delta State Governor Sheriff Oborevwori" loading="lazy">
+   <div class="feature-copy"><div class="role">Executive Governor</div><h3>Rt. Hon. Sheriff Francis Orohwedor Oborevwori</h3>
+    <p>Listed as Governor of Delta State. His administration's published programme is commonly described as the M.O.R.E. Agenda.</p>
+    <ul><li>Roads and bridges across urban and riverine communities.</li><li>Education and technical/vocational infrastructure.</li><li>Healthcare, public service and community development initiatives.</li></ul>
+    <p class="source">Profile: <a href="https://governorsheriff.com/team-member/sheriff-oborevwori/" target="_blank" rel="noopener">Governor's profile</a> • Office listing: <a href="https://opendelta.online/officials/674/" target="_blank" rel="noopener">OpenDelta record</a></p>
+   </div>
+  </article>
+  <article class="feature" style="margin-top:16px">
+   <img src="https://www.qed.ng/wp-content/uploads/2025/03/Delta-State-Deputy-Governor-Monday-Onyeme-2.jpg" alt="Portrait of Deputy Governor Monday Onyeme" loading="lazy">
+   <div class="feature-copy"><div class="role">Deputy Governor</div><h3>Chief (Sir) Monday John Onyeme</h3>
+    <p>Identified as Deputy Governor of Delta State in the current public officials directory.</p>
+    <p class="source">Office listing: <a href="https://opendelta.online/officials/" target="_blank" rel="noopener">OpenDelta — Delta State Government</a> • Photo/report: <a href="https://www.qed.ng/delta-state-deputy-governor-monday-onyeme-2/" target="_blank" rel="noopener">QED.ng</a></p>
+   </div>
+  </article>
+  <div class="notice">Commissioners and Special Advisers: the full portfolio and appointment list needs a fresh official confirmation before individual profiles are published. This prototype deliberately avoids guessing names or assigning achievements to the wrong office holder.</div>
+ </section>
+ <section id="projects">
+  <div class="section-head"><div><div class="kicker">Development tracker</div><h2>Reported projects & initiatives</h2><p>Selected examples from public reporting. Open the source for details.</p></div></div>
+  <div class="toolbar"><input id="projectSearch" type="search" placeholder="Search projects or locations…" aria-label="Search projects"><select id="projectFilter" aria-label="Filter project category"><option value="all">All categories</option><option value="roads">Roads & bridges</option><option value="education">Education</option><option value="health">Healthcare</option><option value="people">Social programmes</option></select></div>
+  <div id="projectList">
+   <article class="project" data-category="roads"><img src="https://pbs.twimg.com/media/GKqkk1bWEAEsRfM.jpg" alt="Road project inspected in Delta State" loading="lazy"><div><div class="status">Reported inspection / commissioning programme</div><h3>Road projects across multiple LGAs</h3><p>Delta State Government published an April 2024 update showing the Governor inspecting projects in Ughelli North, Isoko North, Aniocha South and Oshimili South.</p><a href="https://x.com/DSGovernment/status/1777413971399639352" target="_blank" rel="noopener">View government post ↗</a></div></article>
+   <article class="project" data-category="roads"><img src="https://pbs.twimg.com/media/GP0NBCiXYAEpqwY.jpg" alt="Emevor-Orogun road inauguration" loading="lazy"><div><div class="status">Reported inaugurated • June 2024</div><h3>Emevor–Orogun Road, Phase 1</h3><p>A 4.04 km road with 5.555 km of accompanying side drains was reported inaugurated in Emevor, Isoko North LGA.</p><a href="https://x.com/DSGovernment/status/1800609749454442935" target="_blank" rel="noopener">View government post ↗</a></div></article>
+   <article class="project" data-category="roads"><img src="https://d1jcea4y7xhp7l.cloudfront.net/wp-content/uploads/2023/11/Delta-Governor-Rt.-Hon.-Sheriff-Oborevwori.jpg" alt="Groundbreaking for Effurun-Warri flyover project" loading="lazy"><div><div class="status">Reported flag-off • November 2023</div><h3>Effurun–Warri flyovers and road upgrades</h3><p>News coverage reported the flag-off of a major transport infrastructure package, including flyovers, an interchange and road expansions. The article describes the announced scope, not present completion status.</p><a href="https://thesun.ng/gov-oborevwori-flags-off-construction-of-n78bn-effurun-warri-flyovers/" target="_blank" rel="noopener">Read report ↗</a></div></article>
+   <article class="project" data-category="roads"><img src="https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/06/Oborevwori-Inaugurates-18km-Of-Roads.jpg" alt="Road inauguration event in Ndokwa West" loading="lazy"><div><div class="status">Reported inaugurated • 2026</div><h3>18 km road network in Ndokwa West</h3><p>Arise News reported the inauguration of an 18 km road network in Ndokwa West. Check the report for the named road sections and project details.</p><a href="https://www.arise.tv/oborevwori-inaugurates-18km-of-roads-in-ndokwa-west-orders-more-projects/" target="_blank" rel="noopener">Read report ↗</a></div></article>
+   <article class="project" data-category="education"><img src="https://www.eduweb.com.ng/wp-content/uploads/2026/10/placeholder.jpg" alt="Education and technical training project" loading="lazy"><div><div class="status">Reported programme / project</div><h3>Technical and higher education facilities</h3><p>Public reporting describes investments in technical colleges and university facilities, including the College of Medicine at Southern Delta University. Confirm each facility's current operational status independently.</p><a href="https://www.eduweb.com.ng/governor-sheriff-oborevworis-projects-and-achievements-in-delta-state-2023-2026/" target="_blank" rel="noopener">Read project roundup ↗</a></div></article>
+   <article class="project" data-category="health"><img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=900&q=80" alt="Hospital building, illustrative image" loading="lazy"><div><div class="status">Reported completed • 2026</div><h3>Okpanam Cottage Hospital</h3><p>A July 2026 report by the Grassroots Newspapers Publishers Network said the Oshimili North council administration completed the Okpanam Cottage Hospital project. This is a media-reported council achievement.</p><a href="https://www.grassrootspublishers.com/acnpn-congratulates-deltas-25-council-chairmen-on-two-years-in-office-calls-for-greater-development-efforts/" target="_blank" rel="noopener">Read report ↗</a></div></article>
+   <article class="project" data-category="people"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80" alt="Community programme, illustrative image" loading="lazy"><div><div class="status">Reported programme • 2024</div><h3>DELTA CARES support programme</h3><p>A 2024 report described a fourth phase of DELTA CARES with more than 97,000 reported beneficiaries. Treat the figure as a reported programme claim and consult programme records for verification.</p><a href="https://www.eduweb.com.ng/governor-sheriff-oborevworis-projects-and-achievements-in-delta-state-2023-2026/" target="_blank" rel="noopener">Read project roundup ↗</a></div></article>
+  </div>
+  <p id="noProjects" hidden>No matching projects found. Try another search.</p>
+ </section>
+ <section id="lgas">
+  <div class="section-head"><div><div class="kicker">Grassroots administration</div><h2>Delta's 25 Local Government Areas</h2><p>Chairman names below are from the July 2024 swearing-in reports and require confirmation for current publication.</p></div></div>
+  <div class="toolbar"><input id="lgaSearch" type="search" placeholder="Find an LGA or chairman…" aria-label="Search local governments"></div>
+  <div class="lga-grid" id="lgaGrid">
+   <div class="lga"><b>Aniocha North</b><span>Emmanuel Bazim</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Aniocha South</b><span>Jude Chukwunkwike</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Bomadi</b><span>Dagidi Andaye</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Burutu</b><span>Julius Takeme</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Ethiope East</b><span>Augustine Ogedegbe</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Ethiope West</b><span>Christian Onogba</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Ika North East</b><span>Monday Odigwe</span><small>2024 report spelling</small></div>
+   <div class="lga"><b>Ika South</b><span>Jerry Ehiwarior</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Isoko North</b><span>Godwin Ogorugba</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Isoko South</b><span>Warri Ovoke Friday</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Ndokwa East</b><span>Vincent Osilonya</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Ndokwa West</b><span>Obi Nzete</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Okpe</b><span>Isaiah Esiovwa</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Oshimili North</b><span>Innocent Esewezie</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Oshimili South</b><span>Obi Kelvin Ezenyili</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Patani</b><span>Isaac Aguanah</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Sapele</b><span>Bright Abeke</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Udu</b><span>Vincent Oyibode</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Ughelli North</b><span>Jaro Egbo</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Ughelli South</b><span>Lucky Avweromre</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Ukwuani</b><span>Possible Ajede</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Uvwie</b><span>Anthony Ofoni</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Warri North</b><span>Festus Ashima</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Warri South</b><span>Weyinmi Agbateyiniro</span><small>2024 swearing-in list</small></div>
+   <div class="lga"><b>Warri South West</b><span>Sylvester Oromoni</span><small>2024 swearing-in list</small></div>
+  </div>
+  <p class="source" style="margin-top:15px">Names sourced from <a href="https://www.blanknewsonline.com/the-25-elected-lg-council-chairmen-in-delta-state/" target="_blank" rel="noopener">Blank News Online (17 July 2024)</a> and <a href="https://freshangleng.com/news/34708-Behold_the_newly_sworn_in_25_Local_Government_Chairmen_in_Delta_State" target="_blank" rel="noopener">Fresh Angle (15 July 2024)</a>. Spelling differences exist between reports; confirm with DSIEC or the relevant council.</p>
+ </section>
+ <section id="sources">
+  <div class="section-head"><div><div class="kicker">Transparency & verification</div><h2>Sources and updates</h2><p>Use primary records wherever possible. This prototype is a starting point, not a complete audit.</p></div></div>
+  <div class="cards">
+   <article class="card"><div class="card-body"><h3>Delta State Government</h3><p>Official state portal and government announcements.</p><a href="https://deltastate.gov.ng/" target="_blank" rel="noopener">Visit official portal ↗</a></div></article>
+   <article class="card"><div class="card-body"><h3>Governor's official website</h3><p>Executive profile, agenda and official gallery.</p><a href="https://governorsheriff.com/" target="_blank" rel="noopener">Visit website ↗</a></div></article>
+   <article class="card"><div class="card-body"><h3>OpenDelta officials directory</h3><p>Public office-holder records and institutional source notes.</p><a href="https://opendelta.online/officials/" target="_blank" rel="noopener">Open directory ↗</a></div></article>
+  </div>
+  <p class="disclaimer">For every new entry, record: office holder, office, project name, LGA/community, date, status (announced / ongoing / commissioned / independently verified), source URL, photograph credit and last-checked date. Do not publish an achievement without a traceable source. Photos belong to their respective publishers; obtain permission or use properly licensed images before commercial/public deployment.</p>
+ </section>
+</div>
+</main>
+<footer><div class="foot"><div><h3>DELTA STATE — PUBLIC INFORMATION</h3><p>A civic information prototype designed for mobile and in-vehicle viewing. Built to make public records and project updates easier to browse.</p></div><div><b>Quick links</b><p><a href="#leadership">Leadership</a><br><a href="#projects">Projects</a><br><a href="#lgas">Local Government Areas</a></p></div></div><div class="disclaimer">Independent prototype • Not affiliated with or endorsed by Delta State Government • Content checked against linked public reports on 19 November 2026.</div></footer>
+<script>
+const projectSearch=document.getElementById('projectSearch');
+const projectFilter=document.getElementById('projectFilter');
+const projectCards=[...document.querySelectorAll('.project')];
+function filterProjects(){
+ const q=projectSearch.value.toLowerCase().trim(),cat=projectFilter.value;let shown=0;
+ projectCards.forEach(card=>{const matchText=card.innerText.toLowerCase().includes(q);const matchCat=cat==='all'||card.dataset.category===cat;card.hidden=!(matchText&&matchCat);if(!card.hidden)shown++;});
+ document.getElementById('noProjects').hidden=shown!==0;
+}
+projectSearch.addEventListener('input',filterProjects);projectFilter.addEventListener('change',filterProjects);
+document.getElementById('lgaSearch').addEventListener('input',e=>{
+ const q=e.target.value.toLowerCase().trim();
+ document.querySelectorAll('.lga').forEach(card=>card.hidden=!card.innerText.toLowerCase().includes(q));
+});
+</script>
+</body>
+</html>
